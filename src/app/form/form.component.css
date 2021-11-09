@@ -1,0 +1,82 @@
+h1{
+    color: #EFEBE2;
+    text-align: center;
+    font-family: "Bahnschrift";
+}
+
+p, h2, h4, label{
+    color: #EFEBE2;
+    font-family: "Trebuchet MS";
+    font-size: 25px;
+}
+
+li{
+    color: black;
+    font-family: "Perpetua";
+    font-size: 30px;
+}
+
+#form{
+    background-color: black;
+    border-radius: 20px;
+    height: 500px;
+}
+
+#btncel{
+    font-family: "Garamond";
+    padding: 10px;
+    background-color: #B175FF;
+    color: black;
+    border-style: none;
+    border-radius: 20px;
+}
+
+#btncel:hover{
+    background: none;
+    color:#EFEBE2;
+    border-style: solid;
+    border-color: #B175FF;
+    border-radius: 20px;
+}
+
+.btn{
+    width: 50%;
+    margin: auto;
+    font-family: "Garamond";
+    font-size: 25px;
+    background-color: #AB0552;;
+    color: #EFEBE2;
+    border-style: none;
+    border-radius: 20px;
+}
+
+.btn:hover{
+    background-color: #EFEBE2;
+    color: black;
+    border-style: solid;
+    border-color: #AB0552;
+    border-width: 3px;
+    border-radius: 20px;
+}
+
+.group{
+    display: inline;
+}
+
+.btnc{
+    background: none;
+    border-style: none;
+    font-size: 20px;
+}
+
+#fac{
+    background-color: #B175FF;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: dashed;
+}
+
+#fac p{
+    color: black;
+    font-family: "Perpetua";
+}

@@ -1,0 +1,79 @@
+<h1>Contactos</h1>
+<div class="row align-items-start">
+  <div class="col">
+    <h3>Siguenos en nuestras redes Sociales:</h3>
+    <section class="social">      
+      <a><i class="fab fa-facebook"></i></a>
+      <a><i class="fab fa-twitter"></i></a>
+      <a><i class="fab fa-whatsapp"></i></a>
+      <a><i class="fab fa-telegram"></i></a>
+      <a><i class="fab fa-instagram"></i></a>
+    </section>
+  
+    <section class="map">
+      <h3>Pasa por nuestra sucursal para cualquier consulta</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30172.942385335726!2d-65.25926660563894!3d-19.036556212889888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93fbcf0a5d4ea49d%3A0xba0ed7d99c53c6a7!2sTaquiCell%20Pro!5e0!3m2!1ses!2sbo!4v1636297753387!5m2!1ses!2sbo"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"      
+      ></iframe>
+    </section>
+  </div>
+
+  <div class="col">
+    
+  <section class="comment">
+    <h3>Comentarios y sugerencias</h3>
+    <h4>Dejanos tus opiniones para poder mejorar nuestros servicios</h4>
+    
+    <form class="was-validated">
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo:</label>
+            <input type="email" class="form-control is-invalid" id="exampleFormControlInput1"  placeholder="name@example.com" required/>
+          </div>
+
+        <div class="mb-3">
+            <label for="validationServer03" class="form-label">Telf.</label>
+            <input type="cell" class="form-control is-invalid" id="validationServer03" placeholder="123-456-78" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="validationTextarea" class="form-label">Comentario:</label>
+          <textarea class="form-control is-invalid" id="validationTextarea" rows="3" required></textarea>
+        </div>
+      
+        <div class="mb-3">
+          <button class="btn" type="submit">Enviar</button>
+        </div>
+      </form>
+  </section>
+  </div>
+ 
+</div>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>

@@ -1,0 +1,121 @@
+<h1>Formulario Web</h1>
+<div class="row align-items-start">
+  
+    <section class="col">
+      <p>Llena el formulario y obten un 10% de descuento en tu compra</p>
+        <article class="row g-3" id="form">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Nombre completo:</label>
+              <input type="text" [(ngModel)] = "factura.nombre" class="form-control" id="name" required>
+              <div class="invalid-feedback">
+                Campo obligatorio
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="ci" class="form-label">CI:</label>
+              <input type="text" class="form-control" id="ci" [(ngModel)] = "factura.nit" required>
+              <div class="invalid-feedback">
+                Campo obligatorio
+              </div>
+            </div>
+           
+            <div class="col-md-6">
+              <label for="validationCustom05" class="form-label">Correo:</label>
+              <input type="email" class="form-control" id="validationCustom05" required>
+              <div class="invalid-feedback">
+                Campo obligatorio
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="validationCustom03" class="form-label">Celular:</label>
+              <input type="cell" class="form-control" id="validationCustom03" placeholder="123-456-78" required>
+              <div class="invalid-feedback">
+                Campo obligatorio
+              </div>
+            </div>
+
+            <h4>Seleccione el moledo para la compra:</h4>
+            <div class="col-md-6">
+              <select class="form-select" [(ngModel)] = "selected" style="width: 250px;">
+                <option *ngFor="let c of stock; index as i">{{c.cel}}</option>
+              </select>
+             
+            </div>
+            <div class="col">
+              <button (click)="addProducto()" id="btncel">Agregar Celular</button>
+            </div>
+            
+            <button class="btn" (click)="calcular()">Calcular</button>
+
+        </article>
+    </section>
+
+    <section class="col" id="fac">
+      <h2 style="text-align: center; font-weight: bold;">Información de Factura</h2>
+      <article class="factura">
+        <div >
+          <h4 class="group">Nombre:</h4>
+          <p class="group">   {{factura.nombre}}</p>
+        </div>
+        <div>
+          <h4 class="group">NIT:</h4>
+          <p class="group">   {{factura.nit}}</p>
+        </div>
+        <h4>Detalle de Compra:</h4>
+        <ol>
+          <li *ngFor= "let c of celulares; index as i">            
+              {{c.cel}}
+              ${{c.cost}}
+             <button (click)="deleteProducto(i)" class="btnc"><i class="fas fa-window-close"></i></button>     
+          </li>
+        </ol>
+        <div>
+          <h4 class="group">Costo inicial:</h4>
+          <p class="group"> ${{Incost}}</p>
+        </div>
+        <div>
+          <h4 class="group">Descuento -10%:</h4>
+          <p class="group"> ${{des}}</p>
+        </div>
+        <div>
+          <h4 class="group">Sub total:</h4>
+          <p class="group"> ${{subt}}</p>
+        </div>
+        
+        <div *ngIf = "control == true">
+          <h4 class="group">Descuento -15%:</h4>
+          <p class="group" class="group"> ${{des2}}</p>
+        </div>
+        
+        <h4  class="group">Total:</h4>
+        <p class="group"> ${{total}}</p>        
+      </article>
+    </section>
+</div>
+
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})() 
+
+
+</script>
